@@ -1,0 +1,11 @@
+[Unit]
+Description=Redis Counter
+Wants=redis.target
+After=redis.target
+
+[Service]
+Type=simple
+ExecStart=/opt/counter.py
+
+[Install]
+WantedBy=multi-user.target

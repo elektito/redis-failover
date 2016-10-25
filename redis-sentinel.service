@@ -1,0 +1,10 @@
+[Unit]
+Description=Redis Sentinel
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/redis-sentinel /etc/redis/sentinel.conf
+
+[Install]
+WantedBy=multi-user.target
